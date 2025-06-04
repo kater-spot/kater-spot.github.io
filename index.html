@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TabbyCat Lite</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fffbe6;
+      font-family: sans-serif;
+      font-size: 5rem;
+      user-select: none;
+    }
+    .cat {
+      transition: transform 0.2s ease;
+    }
+    .cat:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="cat" id="cat">🐱</div>
+  <script>
+    const cats = [
+      "🐱", "🐈", "😺", "😸", "😹", "😻", "😼", "😽", "🐾", "🦁", "🐯"
+    ];
+    const catEl = document.getElementById("cat");
+    const randomCat = cats[Math.floor(Math.random() * cats.length)];
+    catEl.textContent = randomCat;
+  </script>
+</body>
+</html>
